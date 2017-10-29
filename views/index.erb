@@ -14,7 +14,17 @@
       <% end %>
     </ul>
 
-    <form action="/tasks" method="post">
+    <!-- <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <a href="/tasks/<%= task["id"] %>">
+            <%= task["name"] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>   --> 
+
+  <form action="/tasks" method="post">
       <label for="task_name">New Task:</label>
       <input type="text" id="task_name" name="task_name">
 
@@ -22,3 +32,33 @@
     </form>
   </body>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+
+  <body>
+    <h1> list</h1>
+
+    <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <a href="/tasks/<%= task["id"] %>">
+        <%= task["name"] %>
+      </a>
+    </li>
+      <% end %>
+  </ul>
+
+    <form action="/tasks" method="post">
+      <label for="task_name">New Task:</label>
+      <input type="text" id="task_name" name="task_name">
+
+      <input type="submit">
+    </form>
+  </body>
+</html> -->
