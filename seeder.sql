@@ -1,1 +1,1 @@
--- Update tasks to seed into your database here
+buy milk
